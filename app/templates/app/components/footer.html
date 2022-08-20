@@ -1,0 +1,86 @@
+    {% load static %}
+    <!-- footer start -->
+    <footer>
+        <div class="container">
+           <div class="row">
+              <div class="col-md-4">
+                  <div class="full">
+                     <div class="logo_footer">
+                       <a href="#"><img width="210" src="{% static 'images/logo3.png' %}" alt="#" /></a>
+                     </div>
+                     <div class="information_f">
+                       <p><strong>ADDRESS:</strong><br>2nd Floor Halwasiya House Hazratganj Lucknow, Uttar Pradesh India.</p>
+                       <p><strong>TELEPHONE:</strong> +91 987 654 3210</p>
+                       <p><strong>EMAIL:</strong> helpdesk@shopincart.com</p>
+                     </div>
+                  </div>
+              </div>
+              <div class="col-md-8">
+                 <div class="row">
+                 <div class="col-md-7">
+                    <div class="row">
+                       <div class="col-md-6">
+                    <div class="widget_menu">
+                       <h3>Menu</h3>
+                       <ul>
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">About</a></li>
+                          <li><a href="#">Services</a></li>
+                          <li><a href="#">Testimonial</a></li>
+                          <li><a href="#">Blog</a></li>
+                          <li><a href="#">Contact</a></li>
+                       </ul>
+                    </div>
+                 </div>
+                 <div class="col-md-6">
+                    <div class="widget_menu">
+                       <h3>Account</h3>
+                       <ul>
+                          <li><a href="#">Account</a></li>
+                          <li><a href="#">Checkout</a></li>
+                          <li><a href="{% url 'login' %}">Login</a></li>
+                          <li><a href="/signup/">Register</a></li>
+                          <li><a href="#">Shopping</a></li>
+                          <li><a href="#">Widget</a></li>
+                       </ul>
+                    </div>
+ 
+                  </div>
+                    </div>
+                 </div>     
+                 <div class="col-md-5">
+                    <div class="widget_menu">
+                       <h3>Trending Category</h3>
+                       <ul>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Grocery</a></li>
+                        <li><a href="#">Mobiles</a></li>
+                        <li><a href="#">Laptops & Computer</a></li>
+                        </ul>
+                       </div>
+                    </div>
+                 </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </footer>
+     <!-- footer end -->
+     <div class="cpy_">
+        <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Django Programing Project!</a><br>
+        
+           Distributed By <a href="https://themewagon.com/" target="_blank">Programing Solutions</a>
+        
+        </p>
+     </div>
+     <!-- jQery -->
+     <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+     <!-- popper js -->
+     <script src="{% static 'js/popper.min.js' %}"></script>
+     <!-- bootstrap js -->
+     <script src="{% static 'js/bootstrap.js' %}"></script>
+     <!-- custom js -->
+     <script src="{% static 'js/custom.js' %}"></script>
+  </body>
+</html>

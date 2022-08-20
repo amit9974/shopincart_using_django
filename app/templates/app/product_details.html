@@ -1,0 +1,72 @@
+{% extends "app/base.html" %} 
+{% load static %} 
+{% block content %}
+{% block title %} <title>Product Details</title> {% endblock title %}
+<br>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+<!-- SHOP SINGLE PRODUCT
+    ================================================== -->
+<div class="container pb-4 pb-xl-7">
+    <h2><b>Details of {{product.name}}</b></h2>
+    <div class="row mb-4">
+        <div class="col-lg-6 col-xl-7 mb-6 mb-lg-10">
+            <div class="border rounded bg-light p-6 d-flex place-content-center">
+                <img class="rounded img-fluid" src="{{product.image.url}}" style="height:400px;" />
+            </div>
+        </div>
+        <div class="col-lg-6 col-xl-5 mb-6 mb-lg-10">
+
+            <div class="ms-xl-5 mt-5">
+                <h2 class="">{{product.name}}</h2>
+                <p class="mb-5">{{product.description}}</p>
+                <div class="mb-5">
+                    <div class="mb-1">Total price:</div>
+                    <ins class="h3 mb-0">Rs.{{product.price}}</ins>
+                </div>
+                  <a href="{% url 'cart_add' product.id %}"><button type="button" class="btn btn-danger">Add to Cart</button></a>&nbsp;
+                  <br>
+				  <!-- Quantity -->
+                </div>
+                <div class="d-flex mb-5">                   
+                        <!-- Icon -->                        
+                        <a href="#" class="btn btn-teal rounded-circle d-flex align-items-center py-2">
+                        <i class="far fa-heart h4 mb-0 text-white"></i>
+                    </a>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-sm table-borderless">
+                        <tbody>
+                            <tr>
+                                <th class="fw-normal">Category:</th>
+                                <td>{{product.category}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <!-- PRODUCT INFO TAB
+                ================================================== -->
+            <div id="Description" class="mb-8">
+                <ul class="nav course-tab-v1 border-bottom h4 mb-8 justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#Description" data-bs-toggle="smooth-scroll" data-offset="0">Description</a>
+                    </li>
+                </ul>
+
+                <div class="mw-xl-65 mx-auto">
+                    <h3 class="">Details</h3>
+                    <p class="mb-6 line-height-md">
+                        {{product.description}}
+                    </p>
+        
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
