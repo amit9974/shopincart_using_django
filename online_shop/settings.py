@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-7b7mm4wsh)^d5!-+x@et!fkhaf+@b5tin*0n19t3mhe=h)&sbv
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.0','shopincartweb.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 #ALLOWED_HOSTS = []
 
 # Application definition
